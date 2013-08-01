@@ -7,7 +7,7 @@ class SlideProcessor(markdown.treeprocessors.Treeprocessor):
     def create_slide(self, buf, i):
         cont = etree.Element('div')
         cont.set('class', 'slide')
-        cont.set('id', str(i))
+        cont.set('id', 'slide' + str(i))
         i += 1
         for b in buf:
             cont.append(b)
