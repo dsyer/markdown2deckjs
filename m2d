@@ -39,7 +39,7 @@ else:
     # Generate markdown from input file
     html = markdown.markdown(content,
                          # Use extensions to create proper slides
-                         extensions=['slider'])
+                         extensions=['slider','codehilite','tables'])
 
 # Open Template supplied as argument
 t = jinja2.Template(open(sys.argv[2]).read())
